@@ -1,0 +1,26 @@
+
+1. Explain why do we want to sometimes to use setImmediate instend of using setTimeout
+    - setImmediate, the schedule call back to run at check pase of the event loop after IO event callback
+    - setTimeout, the schedule call to run after the specific time and register in the timers phase of event loop.
+    If the taks don't require I/O callback or connection vis network, It is better to usd setInmediate.
+    If the task require I/O callback or connection via network, It may be better to use setTimeout
+
+
+
+2. Explain the different between process.nextTick and setInmediate
+    - process.nextTick is like priority queue and it handled before setImmediate.
+    - setImmediate run at check phase and It has block the loop if used to much
+
+
+
+3. Name of core modules that Node provide by default
+    - http
+    - Buffer
+    - console
+    - crypto
+    - os
+    - constants
+    - Cluster, 
+    - inspector
+    - dns 
+    - child_process, console

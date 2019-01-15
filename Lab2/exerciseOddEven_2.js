@@ -12,11 +12,13 @@ Array.prototype.even = function(){
 
 Array.prototype.odd = function(){
     setImmediate(() => {
-        result = [];
-        this.forEach(element => {
-            if(element %2 != 0)
-                result.push(element);
-        });
+        //result = [];
+        const result = this.filter(x => x%2 == 0);
+        // this.filter(()=> x%2 == 0)
+        // this.forEach(element => {
+        //     if(element %2 != 0)
+        //         result.push(element);
+        // });
         console.log(result);
     })
 }

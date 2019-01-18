@@ -46,7 +46,7 @@ const observable = Observable.create((observer) => {
     observer.next('Checking your system...');
     const coreCPU = os.cpus().length;
     const memory = parseInt((os.totalmem()*0.000001)/1024);
-    if(memory < 4 ){
+    if(memory < 9 ){
         observer.next('This app need at least 4GB of RAM');
     } else if(coreCPU < 2){
         observer.next('Processor is not supported');

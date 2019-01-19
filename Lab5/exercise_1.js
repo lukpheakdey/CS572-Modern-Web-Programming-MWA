@@ -1,6 +1,5 @@
 const axios = require('axios');
 const express = require('express');
-var router = express.Router();
 const app = express();
 //const linkUrl = 'https://randomuser.me/api/?results=1';
 const linkUrl = 'https://randomuser.me/api/?results=';
@@ -13,10 +12,6 @@ app.enable('strict proxy');
 app.use(express.static(__dirname, {
     maxAge: '1d'
 }));
-
-router.get('/', function(req, res) {
-    res.render("index", {"title": "Express"});
-});
 
 app.get('/users', function(request, response){
     const page = request.query.results;

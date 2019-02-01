@@ -1,0 +1,8 @@
+<h2>User List</h2>
+
+<ul>
+  <!-- {{ userArray }} -->
+  <li *ngFor='let user of userArray'>
+    <a [routerLink] = "['userdetails', user.login.uuid]">{{ user.name.title }} {{ user.name.first }} {{ user.name.last }}</a>
+  </li>
+</ul>
